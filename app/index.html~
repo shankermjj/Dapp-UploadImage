@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online Certificate DApp</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="./app.js"></script>
+
+
+
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script src="https://wzrd.in/standalone/buffer"></script>
+    <script src="https://unpkg.com/ipfs-api@9.0.0/dist/index.js"
+    integrity="sha384-5bXRcW9kyxxnSMbOoHzraqa7Z0PQWIao+cgeg327zit1hz5LZCEbIMx/LWKPReuB"
+    crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<script type="text/javascript">
+    function upload() {
+      const reader = new FileReader();
+      reader.onloadend = function() {
+        const ipfs = window.IpfsApi('localhost', 5001) // Connect to IPFS
+        const buf = buffer.Buffer(reader.result) // Convert data into buffer
+        ipfs.files.add(buf, (err, result) => { // Upload buffer to IPFS
+          if(err) {
+            console.error(err)
+            return
+          }
+          let url = `https://ipfs.io/ipfs/${result[0].hash}`
+          console.log(`Url --> ${url}`)
+          document.getElementById("url").innerHTML= url
+          document.getElementById("url").href= url
+          document.getElementById("output").src = url
+        })
+      }
+      const photo = document.getElementById("photo");
+      reader.readAsArrayBuffer(photo.files[0]); // Read Provided File
+    }
+</script>
+
+
+<hr/>
+<h1><center>Uploading Certificates in Blockchain  </center></h1>
+<hr/>
+  <div class="section">
+  	    <div align="left"><b>Contract deployed at: </b><div id="confAddress"></div></div>
+  	
+	    <div class="right"><b>Certificate Owner Address: <div id="tentantAddress"></b></div></div>
+  </div>
+<div class="clear"></div>
+<hr/>
+
+
+<div style="width: 60%; float:left">
+	<div class="box">
+		<label><b>Uid Number</b></label> 
+		<input type="text" class="inumber"  id="p"/> </br></br>
+		<label><b> Name</b></label>
+		<input type="text" id="t" />	</br></br>	
+	
+		<label><b>IPFS Url:</b></label>  <span id="url">https://ipfs.io/ipfs/</span>
+			<div class="wrapper">
+  			<button id="caluclate">Evaluate</button></br>
+		  	 <span id="Result";/></span>
+			</div>
+	 </div>
+</div>
+
+<div style="width: 40%; float:right">
+	<br><br>
+ <form action="/">
+      <fieldset>
+        <legend><b>Upload Certificate</b></legend>
+        <input type="file" name="photo" id="photo">
+        <center><button type="button" onclick="upload()">Upload</button></center>
+      </fieldset>
+ </form>
+ </br> </br>
+
+    <a id="i1"></a>
+</div>
+ </br></br>
+</div>
+
+
+
+<div style="width: 100%; float:left">
+<hr/>
+	<center><img id="output1"></center>
+</div>
+
+<div style="width: 100%; float:left">
+<marquee>Welcome to Blockchain De-centralized Technology for  Authenticating Certificates[IMAGES] & storing Digital Certificate on peer-to-peer network. </marquee>
+
+</body>
+
+
+<br><br>
+<div style="width: 100%; float:left">
+<div class="box1">
+<footer><center> All rights are reserved @2018</center></footer>
+</div>
+</html> 
