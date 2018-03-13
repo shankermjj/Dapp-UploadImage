@@ -13,7 +13,7 @@ Installation:
      1. Install NodeJs to execute the DAPP
      2. Install Truffle suit 
      3. Install testrpc(testprc uses ethereumjs to simulate full client behavior and make developing Ethereum)
-     More Details: <a href="http://www.techtonet.com/how-to-install-and-execute-truffle-on-an-ubuntu-16-04">click here </a>  
+     More Details: [click here](http://www.techtonet.com/how-to-install-and-execute-truffle-on-an-ubuntu-16-04)  
   
  Clone: 
  clone the repository to your project Directory
@@ -30,7 +30,7 @@ Installation:
    
 4. Again open a first Terminal for Remaining Execution  <br />
     $ truffle migrate   <br />
-    $ npm run dev  <br /><br /><br />
+    $ npm run dev  <br />
 5. pick the url: https://localhost:8081  <br /><br />
 6. then,paste url in Browser  <br />
 
