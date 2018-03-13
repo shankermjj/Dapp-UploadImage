@@ -3,7 +3,7 @@
 It is Basic Dapp for Blockchain, Creation using Solidity Smartcontract+Truffle+JS using HTML+CSS as front end and IPFS used for Peer-to-peer Upload Image Hash Function
 
 Installation:
-# 1. Install IPFS:
+# Install IPFS:
     a. sudo apt-get update
     b. sudo apt-get install golang-go -y
     c. wget https://dist.ipfs.io/go-ipfs/v0.4.10/go-ipfs_v0.4.10_linux-386.tar.gz
