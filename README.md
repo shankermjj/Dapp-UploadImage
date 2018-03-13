@@ -13,25 +13,24 @@ Installation:
      1. Install NodeJs to execute the DAPP
      2. Install Truffle suit 
      3. Install testrpc(testprc uses ethereumjs to simulate full client behavior and make developing Ethereum)
-     More Details: [Click](http://www.techtonet.com/how-to-install-and-execute-truffle-on-an-ubuntu-16-04/)  
+     More Details: <a href="http://www.techtonet.com/how-to-install-and-execute-truffle-on-an-ubuntu-16-04">click here </a>  
   
  Clone: 
  clone the repository to your project Directory
 
 # Execution:
-Open a terminal //for running IPFS 
-1. ipfs daemon  //it runs in 8080 port  <br />
+1. Open a terminal //for running IPFS 
+    $ ipfs daemon  //it runs in 8080 port  <br />
 
-Open a terminal & change the directory to Dapp-UploadImage & run following Commands <br />
-2. truffle compile            //compiling solidity files  <br />
+2. Open a terminal & change the directory to Dapp-UploadImage & run following Commands <br />
+    $ truffle compile            //compiling solidity files  <br />
 
 3. Open a another terminal and run TestRPC as Dummy Blockchain  <br />
-   testrpc  <br />
+    $ testrpc  <br /><br />
    
-Again open a first Terminal for Remaining Execution  <br />
-4.  truffle migrate   <br />
-5.  npm run dev  <br />
-
-pick the url: https://localhost:8081  <br />
+4. Again open a first Terminal for Remaining Execution  <br />
+    $ truffle migrate   <br />
+    $ npm run dev  <br /><br /><br />
+5. pick the url: https://localhost:8081  <br /><br />
 6. then,paste url in Browser  <br />
 
