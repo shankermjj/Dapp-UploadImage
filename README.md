@@ -19,7 +19,7 @@ Installation:
  clone the repository to your project Directory
 
 # Execution:
-1. Open a terminal //for running IPFS 
+1. Open a terminal //for running IPFS <br />
     $ ipfs daemon  //it runs in 8080 port  <br />
 
 2. Open a terminal & change the directory to Dapp-UploadImage & run following Commands <br />
